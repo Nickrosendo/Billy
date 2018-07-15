@@ -1,0 +1,1 @@
+export const billyIcon = require('./billy-icon.png');
