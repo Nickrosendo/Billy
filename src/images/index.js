@@ -1,1 +1,10 @@
-export const billyIcon = require('./billy-icon.png');
+export const billyIcon = require('./billy-icon.png')
+export const profileIcon = require('./profile-icon.png')
+export const configIcon = require('./cog.png')
+export const logoutIcon = require('./exit.png')
+export const homeIcon = require('./home.png')
+export const refreshIcon = require('./loop2.png')
+export const menuIcon = require('./menu.png')
+export const qrCodeIcon = require('./qrcode.png')
+export const searchIcon = require('./search.png')
+export const restaurantsIcon = require('./spoon-knife.png')

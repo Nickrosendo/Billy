@@ -14,7 +14,8 @@ export default Logo = () => {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 8
   },
   image: {
     width: 40,
@@ -22,6 +23,6 @@ const styles = StyleSheet.create({
   },
   logo: {
     fontSize: 22,
-    color: '#fff'
+    color: '#555'
   }
 })

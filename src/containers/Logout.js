@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Button, Image } from 'react-native'
-import { profileIcon } from '../images';
 
-export default class Profile extends Component {
+import { logoutIcon } from '../images'
+
+export default class Logout extends Component {
   static navigationOptions = {
-    drawerLabel: 'Profile',
+    drawerLabel: 'Logout',
     drawerIcon: () => (
-      <Image
-        source={profileIcon}
-        style={[styles.icon, {tintColor: '#555'}]}
-      />
-    )
+        <Image
+          source={logoutIcon}
+          style={[styles.icon, {tintColor: '#555'}]}
+        />
+      )
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text> Profile Screen</Text>
+        <Text> Logout Screen</Text>
         <Button
           onPress={() => this.props.navigation.toggleDrawer()}
           title="Toggle"

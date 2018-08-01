@@ -1,24 +1,22 @@
-import React, { Component } from 'react'
-import {
-  StyleSheet,
-  View,
-} from 'react-native'
+import { createDrawerNavigator } from 'react-navigation'
+import { YellowBox } from 'react-native'
 
-import MenuHeader from './ui/MenuHeader'
+import Home from './containers/Home'
+import Profile from './containers/Profile'
+import Logout from './containers/Logout'
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <MenuHeader />
-      </View>
-    )
-  }
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated'])
+
+const routerConfig = {
+  Home: { screen: Home },
+  Profile: { screen: Profile },
+  Logout: { screen: Logout }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#eee',
-    flex: 1
-  }
-})
+const drawerConfig = {
+  drawerPosition: 'right'  
+}
+
+const App = createDrawerNavigator(routerConfig, drawerConfig)
+
+export default App

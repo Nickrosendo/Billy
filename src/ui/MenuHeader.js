@@ -1,44 +1,38 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, DrawerLayoutAndroid, Text } from 'react-native'
+import { View, StyleSheet, TouchableHighlight, Image } from 'react-native'
+
+import { profileIcon, menuIcon } from '../images'
 
 import Logo from './Logo'
 
 export default class MenuHeader extends Component {
-  render() {
-    const navigationView = (
-      <View style={{ flex: 1, backgroundColor: '#fff' }}>
-        <Text style={{ margin: 10, fontSize: 15, textAlign: 'left' }}>
-          I'm in the Drawer!
-        </Text>
-      </View>
-    )
+  
+  render() {   
     return (
       <View style={styles.menuHeader}>
-        <Logo />
-        <DrawerLayoutAndroid
-          drawerWidth={300}
-          drawerPosition={DrawerLayoutAndroid.positions.Left}
-          renderNavigationView={() => navigationView}
-        >
-          <View style={{ flex: 1, alignItems: 'center' }}>
-            <Text style={{ margin: 10, fontSize: 15, textAlign: 'right' }}>
-              Hello
-            </Text>
-            <Text style={{ margin: 10, fontSize: 15, textAlign: 'right' }}>
-              World!
-            </Text>
-          </View>
-        </DrawerLayoutAndroid>
+        <TouchableHighlight onPress={ () => this.props.navigation.toggleDrawer()}>
+          <Image style={styles.icon} source={menuIcon}/>
+        </TouchableHighlight>
       </View>
     )
   }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({  
   menuHeader: {
     backgroundColor: '#c1cde5',
-    flex: 0.15,
+    flex: 0.10,
     alignItems: 'center',
-    justifyContent: 'center'
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingLeft: 10,
+    paddingRight: 10
+  },
+  iconContainer: {
+  },
+  icon: {
+    width: 30,
+    height: 30,
+    tintColor: '#555'
   }
 })
