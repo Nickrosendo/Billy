@@ -15,7 +15,8 @@ export default Logo = () => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    marginTop: 8
+    marginTop: 8,
+    marginBottom: 8
   },
   image: {
     width: 40,
