@@ -14,7 +14,7 @@ const routerConfig = {
 }
 
 const drawerConfig = {
-  drawerPosition: 'right'  
+  drawerPosition: 'left'  
 }
 
 const App = createDrawerNavigator(routerConfig, drawerConfig)

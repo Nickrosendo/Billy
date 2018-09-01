@@ -1,13 +1,13 @@
 import React from "react"
 import { StyleSheet, View, Text, Image } from 'react-native'
 
-export default HighLightListItem = (props) => {
+export default RestaurantsHorizontalListItem = (props) => {
 
     const mockSources = [
-        require('../images/mock-logo-1.png'),
-        require('../images/mock-logo-2.png'),
-        require('../images/mock-logo-3.png'),
-        require('../images/mock-logo-4.png'),
+        require('../../images/mock-logo-1.png'),
+        require('../../images/mock-logo-2.png'),
+        require('../../images/mock-logo-3.png'),
+        require('../../images/mock-logo-4.png'),
     ]
 
     return (

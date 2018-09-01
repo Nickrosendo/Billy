@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, TouchableHighlight, Image } from 'react-native'
 
-import { profileIcon, menuIcon } from '../images'
+import { profileIcon, menuIcon } from '../../images'
 
-import Logo from './Logo'
+import Logo from '../logos/Logo'
 
 export default class MenuHeader extends Component {
   
@@ -20,13 +20,11 @@ export default class MenuHeader extends Component {
 
 const styles = StyleSheet.create({  
   menuHeader: {
-    backgroundColor: '#c1cde5',
-    flex: 0.10,
+    flex: 0.20,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingLeft: 10,
-    paddingRight: 10
+    padding: 15,
   },
   iconContainer: {
   },
