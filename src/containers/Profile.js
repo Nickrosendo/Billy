@@ -6,7 +6,7 @@ import MenuHeader from '../ui/menus/MenuHeader';
 
 export default class Profile extends Component {
   static navigationOptions = {
-    drawerLabel: 'Profile',
+    drawerLabel: 'Perfil',
     drawerIcon: () => (
       <Image
         source={profileIcon}
@@ -23,7 +23,7 @@ export default class Profile extends Component {
           <Image style={styles.profileHeaderImage} source={profileImage}/>
           <Text style={styles.profileHeaderName}> Nicolas Oliverira Rosendo</Text>
         </View>
-        <View style={styles.profileContentContainer}>
+        <View style={styles.profileContentContainer}>          
           <Text style={styles.fieldTitle}> E-mail</Text>
           <Text style={styles.fieldValue}> nicolasrosendo@hotmail.com</Text>
           <Text style={styles.fieldTitle}> Telefone</Text>
@@ -52,10 +52,6 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 80
   },
-  profileContentContainer: {
-    alignItems: 'flex-start',
-    padding: 10
-  },
   fieldTitle: {
     fontSize: 16,
     color: '#aaa'
@@ -67,5 +63,9 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
-  }
+  },
+  profileContentContainer: {
+    alignItems: 'flex-start',
+    padding: 10
+  },
 })

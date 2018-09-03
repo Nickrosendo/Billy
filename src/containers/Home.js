@@ -10,7 +10,7 @@ import Logo from '../ui/logos/Logo';
 
 export default class Home extends Component {
   static navigationOptions = {
-    drawerLabel: 'Home',
+    drawerLabel: 'Inicio',
     drawerIcon: () => (
       <Image
         source={homeIcon}
@@ -24,7 +24,7 @@ export default class Home extends Component {
       <ScrollView style={styles.container}>
         <MenuHeader {...this.props} />
         <Logo/>
-        <RestaurantsHorizontalList listTitle="Recomendados"/>
+        <RestaurantsHorizontalList listTitle="Favoritos"/>
         <SearchField/>
         <RestaurantsVerticalList/>
       </ScrollView>
@@ -35,6 +35,7 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#eee',
+    flex: 1
   },
   icon: {
     width: 24,

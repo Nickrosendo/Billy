@@ -20,7 +20,6 @@ export default class MenuHeader extends Component {
 
 const styles = StyleSheet.create({  
   menuHeader: {
-    flex: 0.20,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
