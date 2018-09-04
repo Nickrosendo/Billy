@@ -4,7 +4,7 @@ import { StyleSheet, FlatList, View, Text } from "react-native";
 import RestaurantsVerticalListItem from "../restaurants-list-items/RestaurantsVerticalListItem";
 import SearchField from "../fields/SearchField";
 
-export default class RestaurantsVerticalList extends Component {
+export default class VerticalList extends Component {
   state = {
     list: [
       {
@@ -29,19 +29,19 @@ export default class RestaurantsVerticalList extends Component {
   _keyExtractor = (item, index) => item.id;
 
   _renderItem = ({ item }) => (
-    <RestaurantsVerticalListItem id={item.id} title={item.title} />
+    this.props.listItem ? this.props.listItem : <RestaurantsVerticalListItem id={item.id} title={item.title} />
   );
 
   render() {
     const searchable = this.props.searchable ? <SearchField /> : null;
 
-    const title = this.props.listTitle ? <Text style={styles.HighLightTitle}> {this.props.listTitle} </Text> : null;
+    const title = this.props.listTitle ? <Text style={[styles.HighLightTitle, {textAlign: this.props.titlePostion || "left"}]}> {this.props.listTitle} </Text> : null;
 
     return (
       <View style={styles.container}>
         {searchable}
         {title}
-        <View style={styles.flatListContainer}>
+        <View style={[styles.flatListContainer, {alignItems: this.props.alignItems || "flex-start"}]}>
           <FlatList
             data={this.state.list}
             keyExtractor={this._keyExtractor}
@@ -56,16 +56,14 @@ export default class RestaurantsVerticalList extends Component {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+    paddingTop: 5,
     width: '100%'
   },
   flatListContainer: {
     width: '100%',
-    alignItems: "flex-start",
-    marginTop: 10,
-    paddingTop: 20,
+    marginTop: 10
   },
   HighLightTitle: {
-    textAlign: "left",
     fontSize: 18,
     fontWeight: "600"
   }

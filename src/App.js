@@ -5,6 +5,7 @@ import Home from './containers/Home'
 import Profile from './containers/Profile'
 import BillsHistory from './containers/BillsHistory'
 import PaymentMethods from './containers/PaymentMethods'
+import Wallet from './containers/Wallet'
 import Settings from './containers/Settings'
 import Logout from './containers/Logout'
 
@@ -15,8 +16,9 @@ const routerConfig = {
   Profile: { screen: Profile },
   BillsHistory: { screen: BillsHistory },
   PaymentMethods: { screen: PaymentMethods },
+  Wallet: { screen: Wallet },
   Settings: { screen: Settings },
-  Logout: { screen: Logout },
+  Logout: { screen: Logout }
 }
 
 const drawerConfig = {

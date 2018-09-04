@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, ScrollView, Button, Image, Text } from 'react-native';
 
 import MenuHeader from '../ui/menus/MenuHeader';
-import RestaurantsHorizontalList from '../ui/restaurants-lists/RestaurantsHorizontalList';
-import RestaurantsVerticalList from '../ui/restaurants-lists/RestaurantsVerticalList';
+import HorizontalList from '../ui/lists/HorizontalList';
+import VerticalList from '../ui/lists/VerticalList';
 import SearchField from "../ui/fields/SearchField";
 import { homeIcon } from '../images';
 import Logo from '../ui/logos/Logo';
@@ -24,9 +24,9 @@ export default class Home extends Component {
       <ScrollView style={styles.container}>
         <MenuHeader {...this.props} />
         <Logo/>
-        <RestaurantsHorizontalList listTitle="Favoritos"/>
+        <HorizontalList listTitle="Favoritos"/>
         <SearchField/>
-        <RestaurantsVerticalList/>
+        <VerticalList/>
       </ScrollView>
     )
   }

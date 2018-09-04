@@ -4,7 +4,7 @@ import { StyleSheet, FlatList, View, Text } from "react-native";
 import RestaurantsHorizontalListItem from "../restaurants-list-items/RestaurantsHorizontalListItem";
 import SearchField from "../fields/SearchField";
 
-export default class RestaurantsHorizontalList extends Component {
+export default class HorizontalList extends Component {
   state = {
     list: [
       {
