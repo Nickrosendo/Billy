@@ -26,7 +26,7 @@ export default class VerticalList extends Component {
     ]
   };
 
-  _keyExtractor = (item, index) => item.id;
+  _keyExtractor = item => item.id;
 
   _renderItem = ({ item }) => (
     this.props.listItem ? this.props.listItem : <RestaurantsVerticalListItem id={item.id} title={item.title} />
